@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/media_queries.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/loaderstyle.css">
+    <link rel="stylesheet" href="./css/loadMore.css">
+    <link rel="stylesheet" href="./css/social.css">
+    <link rel="stylesheet" href="./css/authorization_window.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <header>
+        <div class="header-content">
+            <a href="./index.html" class="header-logo">
+                <img src="./images/logo2.png" alt="logo">
+            </a>            
+            <form action="" class="search-form">
+                <input type="search" id="search-input"
+                    placeholder="Enter the movie title, description, or episode number">
+            </form>
+            <div class="switch">
+                <input type="checkbox" id="checkbox" class="switch-check" onchange="toggleTheme()">
+                <label for="checkbox" class="switch-label">
+                    <span></span>
+                </label>
+            </div>
+            <button type="button" class="authorization" onclick="openDialog()"></button>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="movies-container">
+            <div class="action-on-movies">
+                <div class="action-sorting">
+                    <span>Sort by:</span>
+                    <select name="sort" id="sorting" onchange="OnSortingItems()">
+                        <option value="1">From the first episode</option>
+                        <option value="2">From the last episode</option>
+                        <option value="3">From old to new</option>
+                        <option value="4">From new to old</option>
+                    </select>
+                </div>
+                <div class="action-toggle-layout">
+                    <label class="layout row">
+                        <input type="radio" class="layouts" name="changeLayout" onchange="OnChangeLayout()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="layout tile">
+                        <input type="radio" class="layouts " name="changeLayout" onchange="OnChangeLayout()" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="movie-items"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <a class="icon facebook" href="https://www.facebook.com/" target="_blank">
+                <span class="tooltip">Facebook</span>
+                <span><i class="fab fa-facebook-f"></i></span>
+            </a>
+            <a class="icon twitter" href="https://twitter.com" target="_blank">
+                <span class="tooltip">Twitter</span>
+                <span><i class="fab fa-twitter"></i></span>
+            </a>
+            <a class="icon instagram" href="https://www.instagram.com/" target="_blank">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a class="icon youtube" href="https://www.youtube.com/" target="_blank">
+                <span class="tooltip">Youtube</span>
+                <span><i class="fab fa-youtube"></i></span>
+            </a>
+        </div>
+
+    </footer>
+</body>
+<script src="./js/data.js"></script>
+<script src="./js/star.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/df450f45a3.js"></script>
+
+</html>

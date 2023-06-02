@@ -1,0 +1,64 @@
+.switch {
+    border-radius: 40px;
+    height: 30px;
+    position: relative;
+    min-width: 70px;
+    z-index: 1001;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.switch-check {
+    position: absolute;
+    visibility: hidden;
+}
+
+.switch-label {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    text-indent: -9999px;
+}
+
+.switch-label:before,
+.switch-label:after {
+    background: #ffffff;
+    border-radius: 40px;
+    /* top: 0px; */
+    z-index: 12;
+    transition: all 0.2s;
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    position: absolute;
+}
+
+.switch-label:before {
+    background: url(../images/svg/sun.svg) no-repeat center;
+    /* border: 1px solid #ffffff; */
+    left: 0px;
+}
+
+.switch-label:after {
+    background: url(../images/svg/dark.svg) no-repeat center;
+    right: 0px;
+}
+
+.switch-check:checked+.switch-label span {
+    left: 40px;
+}
+
+.switch-label span {
+    background: #000000;
+    border-radius: 50%;
+    /* border: 1px solid #1a1a1a; */
+    display: block;
+    height: 30px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s linear;
+    width: 30px;
+}
